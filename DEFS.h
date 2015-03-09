@@ -5,6 +5,7 @@
 
 enum ActionType //The actions supported (you can add more if needed)
 {
+	//************Added everything in the tool bar************
 	ADD_SMPL_ASSIGN,//Add simple assignment statement
 	ADD_VAR_ASSIGN,	//Add variable assignment statement
 	ADD_COND, //Add a conditional statement (for if and while-loop statements)
@@ -45,6 +46,7 @@ enum DsgnMenuItem //The items of the design menu (you should add more items)
 {
 	//Note: Items are ordered here as they appear in menu
 	//If you change the menu items order, change the order here too
+	//************Added everything in my tool bar************
 	ITM_SMPL_ASSIGN,
 	ITM_VAR_ASSIGN,
 	ITM_COND,
