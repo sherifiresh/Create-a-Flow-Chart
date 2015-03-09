@@ -138,7 +138,7 @@ ActionType Input::GetUserAction() const
 				break;
 			case ITM_VAR_ASSIGN: return ADD_VAR_ASSIGN;
 				break;
-			case ITM_COND: return ADD_CONDITION;
+			case ITM_COND: return ADD_COND;
 				break;
 			case ITM_BEGIN_END: return ADD_BEGIN_END;
 				break;
