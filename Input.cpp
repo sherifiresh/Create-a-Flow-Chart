@@ -155,8 +155,6 @@ ActionType Input::GetUserAction() const
 				break;
 			case ITM_DEL: return DEL; //**********Delete a chart/statement/connection**********
 				break;
-			case ITM_MOVE: return MOVE; //**********Move a chart**********
-				break;
 			case ITM_RESIZE: return RESIZE; //**********Resize a chart**********
 				break;
 			case ITM_SAVE: return SAVE; //**********Save progress**********
