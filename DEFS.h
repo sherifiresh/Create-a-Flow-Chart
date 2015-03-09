@@ -57,6 +57,7 @@ enum DsgnMenuItem //The items of the design menu (you should add more items)
 	ITM_CONNECT,
 	ITM_EDIT,
 	ITM_DEL,
+	ITM_MOVE,
 	ITM_RESIZE,
 	ITM_SAVE,//simple assignment statement
 	ITM_LOAD,
