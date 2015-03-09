@@ -6,7 +6,7 @@
 Output::Output()
 {
 	//Initialize user interface parameters
-	UI.width = 1333;
+	UI.width = 1333; //***********Perfect for tool bar***********
 	UI.height = 700;
 	UI.wx = 15;
 	UI.wy =15;
@@ -14,8 +14,8 @@ Output::Output()
 	UI.AppMode = DESIGN;	//Design Mode is the default mode
 
 	UI.StBrWdth = 50;
-	UI.TlBrWdth = 50;
-	UI.MnItWdth = 50;
+	UI.TlBrWdth = 50; //***********My toolbar length***********
+	UI.MnItWdth = 50; //***********My items width***********
 
 	UI.DrawClr = BLUE;
 	UI.HiClr = RED;
@@ -34,7 +34,7 @@ Output::Output()
 	CreateStatusBar();
 }
 
-void Output::PrintMessage2(string msg, int x, int y)
+void Output::PrintMessage2(string msg, int x, int y) //***********Output text with different coords***********
 {
 	pWind->SetPen(BLACK); 
     pWind->SetFont(20, BOLD | ITALICIZED, BY_NAME, "Arial");
