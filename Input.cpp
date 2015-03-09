@@ -17,7 +17,7 @@ void Input::GetMouseLocation(Point &P)
 {
 	pWind->GetMouseCoord(P.x, P.y);  
 }
-void Input::GetCoords(Input *pIn, Output *pOut)
+void Input::GetCoords(Input *pIn, Output *pOut) //**********I made this so I can easily know which pixels I'm targeting in my functions**********
 {
 	int iX, iY;
 	Point P;
@@ -59,13 +59,14 @@ double Input::GetValue(Output* pO) const	// Reads a double value from the user
 	char Key;
 	string Str;
 	pO->PrintMessage("Please enter a value");
+	//**********Get the double from the user as a string**********
 	while(1)
 	{
 		pWind->WaitKeyPress(Key);
 		if(Key == 27 )	//ESCAPE key is pressed
 			return 0;	//returns nothing as user has cancelled label
 		if(Key == 13 )	//ENTER key is pressed
-			return atof(Str.c_str());
+			return atof(Str.c_str());//**********Change string to double**********
 		if(Key == 8 )	//BackSpace is pressed
 			Str.resize(Str.size() -1 );			
 		else
@@ -134,45 +135,45 @@ ActionType Input::GetUserAction() const
 			//if division result is 0 ==> first item is clicked, if 1 ==> 2nd item and so on
 			switch (ClickedItem)
 			{
-			case ITM_SMPL_ASSIGN: return ADD_SMPL_ASSIGN;
+			case ITM_SMPL_ASSIGN: return ADD_SMPL_ASSIGN; //**********Assigns a state**********
 				break;
-			case ITM_VAR_ASSIGN: return ADD_VAR_ASSIGN;
+			case ITM_VAR_ASSIGN: return ADD_VAR_ASSIGN;  //**********Assigns a variable**********
 				break;
-			case ITM_COND: return ADD_COND;
+			case ITM_COND: return ADD_COND;  //**********Adding a condition**********
 				break;
-			case ITM_BEGIN_END: return ADD_BEGIN_END;
+			case ITM_BEGIN_END: return ADD_BEGIN_END; //**********Adding a begin/end chart**********
 				break;
-			case ITM_INPUT_OUTPUT: return ADD_IN_OUT;
+			case ITM_INPUT_OUTPUT: return ADD_IN_OUT; //**********Adding an input/output chart**********
 				break;
-			case ITM_CONDITION: return ADD_CONDITION;
+			case ITM_CONDITION: return ADD_CONDITION; //**********Adding a conditional chart**********
 				break;
-			case ITM_ACTION: return ADD_ACTION;
+			case ITM_ACTION: return ADD_ACTION; //**********Adding an action chart**********
 				break;
-			case ITM_CONNECT: return ADD_CONNECTOR;
+			case ITM_CONNECT: return ADD_CONNECTOR; //**********Adding/Editing a connection between charts**********
 				break;
-			case ITM_EDIT: return EDIT_STAT;
+			case ITM_EDIT: return EDIT_STAT; //**********Edit Statement**********
 				break;
-			case ITM_DEL: return DEL;
+			case ITM_DEL: return DEL; //**********Delete a chart/statement/connection**********
 				break;
-			case ITM_MOVE: return MOVE;
+			case ITM_MOVE: return MOVE; //**********Move a chart**********
 				break;
-			case ITM_RESIZE: return RESIZE;
+			case ITM_RESIZE: return RESIZE; //**********Resize a chart**********
 				break;
-			case ITM_SAVE: return SAVE;
+			case ITM_SAVE: return SAVE; //**********Save progress**********
 				break;
-			case ITM_LOAD: return LOAD;
+			case ITM_LOAD: return LOAD; //**********Load project**********
 				break;
-			case ITM_COMMENT: return COMMENT;
+			case ITM_COMMENT: return COMMENT; //**********Comment a statement/chart**********
 				break;
-			case ITM_COPY: return COPY;
+			case ITM_COPY: return COPY; //**********Copy anything to clipboard**********
 				break;
-			case ITM_PASTE: return PASTE;
+			case ITM_PASTE: return PASTE; //**********Paste from clipboard**********
 				break;
-			case ITM_UNDO: return UNDO;
+			case ITM_UNDO: return UNDO; //**********Undo last action**********
 				break;
-			case ITM_EXIT: return EXIT;
+			case ITM_EXIT: return EXIT; //**********Exit from project**********
 				break;
-			default: return DSN_TOOL;
+			default: return DSN_TOOL; //**********Empty click**********
 			}
 		}
 	
