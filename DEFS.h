@@ -7,7 +7,7 @@ enum ActionType //The actions supported (you can add more if needed)
 {
 	ADD_SMPL_ASSIGN,//Add simple assignment statement
 	ADD_VAR_ASSIGN,	//Add variable assignment statement
-	ADD_CONDITION, //Add a conditional statement (for if and while-loop statements)
+	ADD_COND, //Add a conditional statement (for if and while-loop statements)
 	ADD_BEGIN_END,
 	ADD_IN_OUT,
 	ADD_CONDITION,
